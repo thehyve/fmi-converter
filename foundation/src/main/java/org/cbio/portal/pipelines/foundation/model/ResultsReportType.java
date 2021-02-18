@@ -40,10 +40,14 @@ import javax.xml.bind.annotation.*;
  */
 @XmlRootElement(name="ResultsReport")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ResultsReportType", propOrder = {
-    "variantReport",
-    "resultsPayload"
-})
+@XmlType(
+        namespace="http://integration.foundationmedicine.com/reporting",
+        name = "ResultsReportType",
+        propOrder = {
+            "variantReport",
+            "resultsPayload"
+        }
+)
 public class ResultsReportType {
     
     @XmlElement(name = "variant-report", required = false)
